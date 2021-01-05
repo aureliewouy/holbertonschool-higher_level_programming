@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+""" task 2 class square"""
+
+
 class Square:
     """ a class square that defines a square """
     def __init__(self, size=0):
