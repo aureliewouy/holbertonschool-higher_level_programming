@@ -1,0 +1,42 @@
+The testing module for task 0. Integers addition
+=================================================
+
+Using the function ``add_integer``
+-------------------------------------------------
+
+This is an example text file in reStructuredText format.  First import
+``add_integer`` from the ``0-add_integer`` module:
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Now use it:
+
+    >>> add_integer(1, 2)
+    3
+
+    >>> add_integer(100, -2)
+    98
+
+    >>> add_integer(100.3, -2)
+    98
+
+    >>> add_integer(0)
+    98
+
+    >>> add_integer(4, "School")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+    >>> add_integer(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+    >>> add_integer(24.87654, 67.2346)
+    91
+
+    >>> add_integer(4, 25, 3)
+    Traceback (most recent call last):
+    ...
+    TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
