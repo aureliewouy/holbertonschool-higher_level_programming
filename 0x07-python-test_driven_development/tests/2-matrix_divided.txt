@@ -1,0 +1,51 @@
+The testing module for task 1. Divide a matrix
+=================================================
+
+Using the function ``matrix_divided``
+-------------------------------------------------
+
+This is an example text file in reStructuredText format.  First import
+``matrix_divided`` from the ``2-matrix_divided`` module:
+
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Now use it:
+
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6]], 3)
+    [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+    >>> matrix_divided([[1.5, 4.8], [7.99, 9.3389]], 2)
+    [[0.75, 2.4], [4.0, 4.67]]
+
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6]], 3.5)
+    [[0.29, 0.57, 0.86], [1.14, 1.43, 1.71]]
+
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6, 9]], 3)
+    Traceback (most recent call last):
+    ...
+    TypeError: Each row of the matrix must have the same size
+
+    >>> matrix_divided([[1, 2], [4, 9]], 0)
+    Traceback (most recent call last):
+    ...
+    ZeroDivisionError: division by zero
+
+    >>> matrix_divided([[1, 8], [2, 9]], "two")
+    Traceback (most recent call last):
+    ...
+    TypeError: div must be a number
+
+    >>> matrix_divided([[1, "hello"], [4, 54]], 2)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+    >>> matrix_divided([[]], 2)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+    >>> matrix_divided((1, 2, 3), 2)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
