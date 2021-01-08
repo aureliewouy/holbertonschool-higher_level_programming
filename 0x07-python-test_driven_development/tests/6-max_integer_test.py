@@ -70,7 +70,7 @@ class TestMaxInteger(unittest.TestCase):
     """
     Test with operand
     """
-    self.assertEqual(max_integer([1 - 3, 2 * 2 , 7 + 3]), 10)
+    self.assertEqual(max_integer([1 - 3, 2 * 2, 7 + 3]), 10)
 
 if __name__ == '__main__':
     unittest.main()
