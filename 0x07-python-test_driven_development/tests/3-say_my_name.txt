@@ -1,0 +1,36 @@
+The testing module for task 2. Say my name
+=================================================
+
+Using the function ``say_my_name``
+-------------------------------------------------
+
+This is an example text file in reStructuredText format.  First import
+``say_my_name`` from the ``3-say_my_name`` module:
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Now use it:
+
+    >>> say_my_name("Aurelie", "Cedia")
+    My name is Aurelie Cedia
+
+    >>> say_my_name("Aurelie")
+    My name is Aurelie 
+
+    >>> say_my_name("John", "Smith78")
+    My name is John Smith78
+
+    >>> say_my_name(8, "Cedia")
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+    >>> say_my_name("John", None)
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
+
+    >>> say_my_name("Aurelie","Wouy Yan", "Cedia")
+    Traceback (most recent call last):
+    ...
+    TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
