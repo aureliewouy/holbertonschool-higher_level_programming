@@ -4,6 +4,8 @@
 Task 1 - Divide a matrix
 
 """
+
+
 def matrix_divided(matrix, div):
     """
     Function that divides all elements of a matrix
