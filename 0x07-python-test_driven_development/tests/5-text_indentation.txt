@@ -1,4 +1,4 @@
-The testing module for task 4. Text indentation
+<The testing module for task 4. Text indentation
 =================================================
 
 Using the function ``text_indentation``
@@ -16,7 +16,38 @@ Now use it:
     <BLANKLINE>
     I'm good
 
+    >>> text_indentation("Hello")
+    Hello
+
+    >>> text_indentation("? , ! : .")
+    ?
+    <BLANKLINE>
+    , ! :
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+
     >>> text_indentation(22)
     Traceback (most recent call last):
     ...
     TypeError: text must be a string
+
+    >>> text_indentation(["Hi", "Hello", "Goodmorning"])
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+    >>> text_indentation(False)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+    >>> text_indentation("Hi", "Hola")
+    Traceback (most recent call last):
+    ...
+    TypeError: text_indentation() takes 1 positional argument but 2 were given
+
+    >>> text_indentation()
+    Traceback (most recent call last):
+    ...
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
