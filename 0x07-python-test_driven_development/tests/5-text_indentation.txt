@@ -1,4 +1,4 @@
-<The testing module for task 4. Text indentation
+The testing module for task 4. Text indentation
 =================================================
 
 Using the function ``text_indentation``
@@ -15,6 +15,9 @@ Now use it:
     Hello, how are you ?
     <BLANKLINE>
     I'm good
+
+    >>> text_indentation("""                 Text with spaces            """)
+                     Text with spaces            
 
     >>> text_indentation("Hello")
     Hello
