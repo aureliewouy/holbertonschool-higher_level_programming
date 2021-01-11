@@ -15,7 +15,7 @@ class Rectangle:
         self.width = width
         self.height = height
         Rectangle.number_of_instances += 1
-        type(self).print_symbol
+        Rectangle.print_symbol
 
     @property
     def width(self):
@@ -64,7 +64,7 @@ class Rectangle:
             return ("")
 
         for i in range(self.__height):
-           rect += (str(self.print_symbol)) * (self.__width) + ('\n')
+            rect += (str(self.print_symbol)) * (self.__width) + ('\n')
         return (rect[:-1])
 
     def __repr__(self):
