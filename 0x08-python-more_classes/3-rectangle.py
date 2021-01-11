@@ -53,7 +53,8 @@ class Rectangle:
         """ Using __str__ method for string representation of the reactangle"""
         rect = ""
         if self.__width is 0 or self.__height is 0:
-            return ""
+            return ("")
+
         for i in range(self.__height):
-           rect += ("#") * (self.__width) + ("\n")
+           rect += ('#') * (self.__width) + ('\n')
         return (rect[:-1])
