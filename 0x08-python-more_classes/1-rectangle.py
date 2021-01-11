@@ -4,12 +4,13 @@ Task 1 - Real definition of a rectangle
 
 """
 
+
 class Rectangle:
     """Class that defines a rectangle"""
     def __init__(self, width=0, height=0):
         """ Initialise Rectangle """
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
