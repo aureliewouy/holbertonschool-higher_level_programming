@@ -1,0 +1,57 @@
+The testing module for task 1. My list
+=================================================
+
+Using the Class ``MyList``
+-------------------------------------------------
+
+This is an example text file in reStructuredText format.  First import
+``MyList`` from the ``1-my_list`` module:
+
+    >>> MyList = __import__('1-my_list').MyList
+
+Now use it:
+
+    >>> my_list = MyList()
+
+    >>> MyList([1, 4, 2, 3, 5])
+    [1, 4, 2, 3, 5]
+
+    >>> MyList([1.5, 4.9, 2, 3, 5])
+    [1.5, 4.9, 2, 3, 5]
+
+    >>> MyList([-2, -9, -1])
+    [-2, -9, -1]
+
+    >>> MyList([])
+    []
+
+    >>> MyList(['a', 9, 3])
+    ['a', 9, 3]
+
+    >>> MyList(True)
+    Traceback (most recent call last):
+    ...
+    TypeError: 'bool' object is not iterable
+
+    >>> MyList(3)
+    Traceback (most recent call last):
+    ...
+    TypeError: 'int' object is not iterable
+
+    >>> my_list = MyList([1, 4, 2, 3, 5])
+    >>> my_list.print_sorted()
+    [1, 2, 3, 4, 5]
+
+    >>> my_list = MyList([])
+    >>> my_list.print_sorted()
+    []
+
+    >>> my_list = MyList([-3, -1, -7])
+    >>> my_list.print_sorted()
+    [-7, -3, -1]
+
+    >>> my_list = MyList([3, 1, "a"])
+    >>> my_list.print_sorted()
+    Traceback (most recent call last):
+    ...
+    TypeError: unorderable types: str() < int()
