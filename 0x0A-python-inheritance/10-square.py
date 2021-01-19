@@ -9,6 +9,5 @@ class Square(Rectangle):
     Class that inherits from Rectangle
     """
     def __init__(self, size):
-        super().integer_validator("size", size)
+        Rectangle.integer_validator(self, "size", size)
         super().__init__(size, size)
-        self.__size = size
