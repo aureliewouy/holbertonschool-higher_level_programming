@@ -73,3 +73,18 @@ Now use it:
     Traceback (most recent call last):
     ...
     AttributeError: 'BaseGeometry' object has no attribute 'newarea'
+
+    >>> bg.integer_validator("age", True)
+    Traceback (most recent call last):
+    ...
+    TypeError: age must be an integer
+
+    >>> bg.integer_validator("age", None)
+    Traceback (most recent call last):
+    ...
+    TypeError: age must be an integer
+
+    >>> bg.integer_validator("age", {3, 4})
+    Traceback (most recent call last):
+    ...
+    TypeError: age must be an integer
