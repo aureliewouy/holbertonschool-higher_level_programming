@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-""" Task 10 - Square #1
+"""
+
+Task 10 - Square #1
 
 """
 
