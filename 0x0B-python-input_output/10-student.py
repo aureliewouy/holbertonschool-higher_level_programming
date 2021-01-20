@@ -3,6 +3,7 @@
 My class Student that defines a student
 """
 
+
 class Student:
     """ Class student
     """
@@ -17,6 +18,6 @@ class Student:
             return self.__dict__
         new = {}
         for key, value in self.__dict__.items():
-            if key == attrs:
+            if key in attrs:
                 new[key] = value
         return new
