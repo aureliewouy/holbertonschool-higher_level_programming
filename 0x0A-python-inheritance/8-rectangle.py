@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-""" Task 8 - Rectangle """
+""" Task 8 - Rectangle
+"""
 
 
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
