@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-""" Task 11 - Square #2 """
+""" Task 11 - Square #2
+
+"""
 
 
 Rectangle = __import__('9-rectangle').Rectangle
