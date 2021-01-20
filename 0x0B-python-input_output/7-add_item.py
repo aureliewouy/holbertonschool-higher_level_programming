@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+Load, add, save
+"""
 import json
 from sys import argv
 

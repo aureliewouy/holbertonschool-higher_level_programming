@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+Write to a file
+"""
 def write_file(filename="", text=""):
     """
     Function that writes a string to a text file UTF8 and returns num of char

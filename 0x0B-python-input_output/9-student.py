@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-import json
 """
 
 My class Student that defines a student
