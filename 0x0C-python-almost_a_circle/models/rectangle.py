@@ -2,7 +2,6 @@
 """
 First Rectangle
 """
-from sys import argv
 from models.base import Base
 
 
@@ -122,3 +121,14 @@ class Rectangle(Base):
                 self.x = kwargs.get('x')
             if "y" in kwargs.keys():
                 self.y = kwargs.get('y')
+
+    def to_dictionary(self):
+        """
+        Returns the dictionary representation of a Reactangle
+        """
+        to_dict = {'id' : self.id,
+                   'width' : self.width,
+                   'height' : self.height,
+                   'x' : self.x,
+                   'y' : self.y}
+        return to_dict
