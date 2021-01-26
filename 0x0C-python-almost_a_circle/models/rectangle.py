@@ -94,6 +94,9 @@ class Rectangle(Base):
             print()
 
     def __str__(self):
+        """
+        Method str
+        """
         name = type(self).__name__
         i = self.id
         x = self.x
@@ -103,6 +106,9 @@ class Rectangle(Base):
         return ("[{}] ({}) {}/{} - {}/{}".format(name, i, x, y, w, h))
 
     def update(self, *args, **kwargs):
+        """
+        Update function
+        """
         nb = len(args)
         if nb > 0:
             self.id = args[0]
