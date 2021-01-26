@@ -42,7 +42,7 @@ class Base:
         if list_objs is not None:
             for obj in list_objs:
                 newlist.append(obj.to_dictionary())
-            filename = "{}.json".format(cls.__name__)
+        filename = "{}.json".format(cls.__name__)
         with open(filename, mode="w", encoding="utf-8") as f:
             f.write(cls.to_json_string(newlist))
 
