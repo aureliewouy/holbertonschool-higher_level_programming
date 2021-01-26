@@ -39,13 +39,12 @@ class Base:
         Writes the JSON string representation list_objs to a file
         """
         newlist = []
-        if list_objs is None:
-            return newlist
-        for obj in list_objs:
-            newlist.append(obj.to_dictionary())
-        filename = "{}.json".format(cls.__name__)
-        with open(filename, mode="w", encoding="utf-8") as file:
-            file.write(cls.to_json_string(newlist))
+        if list_objs is not None:
+            for obj in list_objs:
+                newlist.append(obj.to_dictionary())
+            filename = "{}.json".format(cls.__name__)
+            with open(filename, mode="w", encoding="utf-8") as f:
+                f.write(cls.to_json_string(newlist))
 
     @staticmethod
     def from_json_string(json_string):
@@ -100,8 +99,8 @@ class Base:
         for obj in list_objs:
             newlist.append(obj.to_dictionary())
         filename = "{}.csv".format(cls.__name__)
-        with open(filename, mode="w", encoding="utf-8") as file:
-            file.write(cls.to_json_string(newlist))
+        with open(filename, mode="w", encoding="utf-8") as f:
+            f.write(cls.to_json_string(newlist))
 
     @classmethod
     def load_from_file_csv(cls):
