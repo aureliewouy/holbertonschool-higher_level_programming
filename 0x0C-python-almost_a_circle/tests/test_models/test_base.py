@@ -7,6 +7,9 @@ from models.base import Base
 
 
 class TestBase(unittest.TestCase):
+    """
+    Test for the Base class with Unittest
+    """
 
     def test_id(self):
         """
@@ -29,3 +32,6 @@ class TestBase(unittest.TestCase):
         """
         test = Base(-1)
         self.assertEqual(test.id, -1)
+
+if __name__ == '__main__':
+    unittest.main()

@@ -7,6 +7,9 @@ from models.rectangle import Rectangle
 
 
 class TestRectangle(unittest.TestCase):
+    """
+    Test for the Rectangle class  with unittest
+    """
 
     def test_width_height(self):
         """
@@ -22,6 +25,7 @@ class TestRectangle(unittest.TestCase):
         """
         test = Rectangle(23, 33)
         self.assertEqual(test.x, 0)
+        self.assertEqual(test.y, 0)
 
     def test_xy(self):
         """
@@ -76,3 +80,50 @@ class TestRectangle(unittest.TestCase):
         """
         with self.assertRaises(TypeError):
             Rectangle()
+
+    def test_area(self):
+        """
+        Test the area public function
+        """
+        r = Rectangle(3, 2)
+        self.assertEqual(r.area(), 6)
+        r1 = Rectangle(8, 7, 0, 0, 12)
+        self.assertEqual(r1.area(), 56)
+
+    def test_str(self):
+        """
+        Test the str method
+        """
+        r1 = Rectangle(2, 2, 1, 1, 15)
+        self.assertEqual(str(r1), "[Rectangle] (15) 1/1 - 2/2")
+
+    def test_update(self):
+        """
+        Test for the uptade method
+        """
+        r1 = Rectangle(10, 10, 10, 10)
+        r1.update(89, 2, 3, 4, 5)
+        self.assertEqual(str(r1), "[Rectangle] (89) 4/5 - 2/3")
+
+    def test_up_kwargs(self):
+        """
+        Test for kwargs
+        """
+        r2 = Rectangle(10, 10, 10, 10)
+        r2.update(height=1)
+        r2.update(width=1, x=2)
+        r2.update(y=1, width=2, x=3, id=90)
+        r2.update(x=1, height=2, y=3, width=4)
+        self.assertEqual(str(r2), "[Rectangle] (90) 1/3 - 4/2")
+"""
+    def test_todict(self):
+        """
+   """     Test for the to_dictionary() function
+        """
+     """   r1 = Rectangle(10, 2, 1, 9)
+        r1_dictionary = r1.to_dictionary()
+        self.assertEqual(type(r1_dictionary), )
+"""
+
+if __name__ == '__main__':
+    unittest.main()
