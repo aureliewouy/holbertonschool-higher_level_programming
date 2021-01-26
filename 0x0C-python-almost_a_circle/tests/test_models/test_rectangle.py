@@ -80,6 +80,10 @@ class TestRectangle(unittest.TestCase):
         """
         with self.assertRaises(TypeError):
             Rectangle()
+        with self.assertRaises(TypeError):
+            Rectangle(None)
+        with self.assertRaises(TypeError):
+            Rectangle(1)
 
     def test_area(self):
         """
@@ -115,15 +119,7 @@ class TestRectangle(unittest.TestCase):
         r2.update(y=1, width=2, x=3, id=90)
         r2.update(x=1, height=2, y=3, width=4)
         self.assertEqual(str(r2), "[Rectangle] (90) 1/3 - 4/2")
-"""
-    def test_todict(self):
-        """
-   """     Test for the to_dictionary() function
-        """
-     """   r1 = Rectangle(10, 2, 1, 9)
-        r1_dictionary = r1.to_dictionary()
-        self.assertEqual(type(r1_dictionary), )
-"""
+
 
 if __name__ == '__main__':
     unittest.main()
