@@ -1,9 +1,8 @@
 #!/usr/bin/python3
+"""
+Modul for the Square class !
+"""
 from models.rectangle import Rectangle
-
-"""
-And now, the Square !
-"""
 
 
 class Square(Rectangle):
@@ -11,9 +10,15 @@ class Square(Rectangle):
     Class Square that inherits from Rectangle
     """
     def __init__(self, size, x=0, y=0, id=None):
+        """
+        Initialization of the square class
+        """
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
+        """
+        Using str method
+        """
         name = type(self).__name__
         i = self.id
         x = self.x
