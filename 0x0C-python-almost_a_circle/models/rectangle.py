@@ -1,6 +1,12 @@
 #!/usr/bin/python3
 """ base module model """
 from models.base import Base
+"""
+First Rectangle
+Class that inherit from the Base class, and we implemented
+the area, the __str__ method, how to display
+how to update and to do a dictionary representation
+"""
 
 
 class Rectangle(Base):
