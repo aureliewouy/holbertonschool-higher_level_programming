@@ -45,7 +45,7 @@ class Square(Rectangle):
         """
         Update function
         """
-        nb = len(args);
+        nb = len(args)
         if nb > 0:
             self.id = args[0]
         if nb > 1:
@@ -68,8 +68,8 @@ class Square(Rectangle):
         """
         Returns the dictionary representation of a Square
         """
-        to_dict = {'id' : self.id,
-                   'size' : self.size,
-                   'x' : self.x,
-                   'y' : self.y}
+        to_dict = {'id': self.id,
+                   'size': self.size,
+                   'x': self.x,
+                   'y': self.y}
         return to_dict
