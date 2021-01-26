@@ -1,17 +1,13 @@
 #!/usr/bin/python3
-""" base module model """
+"""This module creates a class Rectangle"""
 from models.base import Base
-"""
-First Rectangle
-Class that inherit from the Base class, and we implemented
-the area, the __str__ method, how to display
-how to update and to do a dictionary representation
-"""
 
 
 class Rectangle(Base):
     """
-    Rectangle class
+    This is a class Rectangle inherits from Base with:
+    - private instance attributes
+    - class constructor
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
@@ -108,7 +104,7 @@ class Rectangle(Base):
         return ("[{}] ({}) {}/{} - {}/{}".format(name, i, x, y, w, h))
 
     def update(self, *args, **kwargs):
-        nb = len(args);
+        nb = len(args)
         if nb > 0:
             self.id = args[0]
         if nb > 1:
@@ -135,9 +131,9 @@ class Rectangle(Base):
         """
         Returns the dictionary representation of a Reactangle
         """
-        to_dict = {'id' : self.id,
-                   'width' : self.width,
-                   'height' : self.height,
-                   'x' : self.x,
+        to_dict = {'id': self.id,
+                   'width': self.width,
+                   'height': self.height,
+                   'x': self.x,
                    'y' : self.y}
         return to_dict
