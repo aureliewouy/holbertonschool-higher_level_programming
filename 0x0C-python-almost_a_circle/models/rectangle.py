@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""base module model"""
+""" base module model """
 from models.base import Base
 
 
