@@ -65,7 +65,7 @@ class Base:
             dummy = cls(1, 1)
         elif cls.__name__ is "Square":
             dummy = cls(1)
-        else :
+        else:
             return None
         dummy.update(**dictionary)
         return dummy
@@ -78,7 +78,7 @@ class Base:
         filename = "{}.json".format(cls.__name__)
 
         if os.path.exists(filename):
-            with open(filename, encoding = "utf-8") as f:
+            with open(filename, encoding="utf-8") as f:
                 content = f.read()
             objs = cls.from_json_string(content)
             newlist = []
@@ -111,7 +111,7 @@ class Base:
         filename = "{}.csv".format(cls.__name__)
 
         if os.path.exists(filename):
-            with open(filename, encoding = "utf-8") as f:
+            with open(filename, encoding="utf-8") as f:
                 content = f.read()
             objs = cls.from_json_string(content)
             newlist = []
