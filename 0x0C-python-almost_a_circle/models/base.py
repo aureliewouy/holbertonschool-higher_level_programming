@@ -15,6 +15,9 @@ class Base:
     __nb_objects = 0
 
     def __init__(self, id=None):
+        """
+        Initialize the id with __init__ method
+        """
         if id is not None:
             self.id = id
         else:
@@ -56,7 +59,7 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """
-        Returns an instace with all attributes already set
+        Returns an instance with all attributes already set
         """
         if cls.__name__ is "Rectangle":
             dummy = cls(1, 1)
@@ -73,6 +76,39 @@ class Base:
         return a list of instances
         """
         filename = "{}.json".format(cls.__name__)
+
+        if os.path.exists(filename):
+            with open(filename, encoding = "utf-8") as f:
+                content = f.read()
+            objs = cls.from_json_string(content)
+            newlist = []
+            for obj in objs:
+                new = cls.create(**obj)
+                newlist.append(new)
+            return newlist
+        else:
+            return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """
+        Writes the JSON string representation list_objs to a csv file
+        """
+        newlist = []
+        if list_objs is None:
+            return newlist
+        for obj in list_objs:
+            newlist.append(obj.to_dictionary())
+        filename = "{}.csv".format(cls.__name__)
+        with open(filename, mode="w", encoding="utf-8") as file:
+            file.write(cls.to_json_string(newlist))
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """
+        Returns a list of instance
+        """
+        filename = "{}.csv".format(cls.__name__)
 
         if os.path.exists(filename):
             with open(filename, encoding = "utf-8") as f:
