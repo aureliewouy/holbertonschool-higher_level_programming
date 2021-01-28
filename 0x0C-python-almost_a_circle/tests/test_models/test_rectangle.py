@@ -120,6 +120,18 @@ class TestRectangle(unittest.TestCase):
         r2.update(x=1, height=2, y=3, width=4)
         self.assertEqual(str(r2), "[Rectangle] (90) 1/3 - 4/2")
 
+    def test_save(self):
+        """ Test save to file """
+        test = Rectangle.save_to_file([])
+        self.assertEqual(test, None)
+        self.assertEqual(Rectangle.save_to_file([Rectangle(1, 2)]), None)
+
+    def test_create(self):
+        """ Testing create method """
+        test1 = Rectangle(2, 1, 5)
+        test1_dict = test1.to_dictionary()
+        test2 = Rectangle.create(**test1_dict)
+        self.assertEqual(type(test2), type(test2))
 
 if __name__ == '__main__':
     unittest.main()
