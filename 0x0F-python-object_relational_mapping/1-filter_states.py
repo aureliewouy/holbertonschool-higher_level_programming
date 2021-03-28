@@ -18,6 +18,6 @@ if __name__ == "__main__":
         ORDER BY id ASC""")
         fetch = c.fetchall()
         for row in fetch:
-            print("{}".format(row))
+            print(row)
         c.close()
         db.close()
