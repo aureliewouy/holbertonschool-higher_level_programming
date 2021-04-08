@@ -1,3 +1,3 @@
 #!/bin/bash
 # cURL Method
-curl "$1" -X GET -L
+curl -sI "$1" -X GET -L
