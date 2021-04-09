@@ -10,7 +10,6 @@ if __name__ == "__main__":
     usrname = sys.argv[1]
     passwd = sys.argv[2]
     url = "https://api.github.com/user"
-    info = {'Authorization': 'token {}'.format(passwd)}
     r = requests.get(url, auth=(usrname, passwd)).json()
     if r.get('id'):
         print("{}".format(r.get('id')))
