@@ -11,7 +11,9 @@ request.get(url[0], function (error, response, body) {
   const jsonBody = JSON.parse(body);
   for (const element of jsonBody) {
     if (usr !== element.userId) {
-      arr[usr] = completed;
+      if (completed > 0) {
+        arr[usr] = completed;
+      }
       completed = 0;
       usr++;
     }
@@ -19,6 +21,8 @@ request.get(url[0], function (error, response, body) {
       completed++;
     }
   }
-  arr[usr] = completed;
+  if (completed > 0) {
+    arr[usr] = completed;
+  }
   console.log(arr);
 });
