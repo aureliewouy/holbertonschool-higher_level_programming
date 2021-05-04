@@ -5,7 +5,7 @@ request.get(url[0], function (error, response, body) {
   if (error) {
     console.error(error);
   }
-  let usr = 1;
+  let usr = 0;
   const arr = {};
   let completed = 0;
   const jsonBody = JSON.parse(body);
