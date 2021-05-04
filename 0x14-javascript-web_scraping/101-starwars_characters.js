@@ -7,9 +7,8 @@ request(url, function (error, response, body) {
     console.error(error);
   }
   const jsonBody = JSON.parse(body);
-  let i = [];
-  for (i = 0; i < jsonBody.characters.length; i++) {
-    request(jsonBody.characters[i], function (error, response, body) {
+  for (const c of jsonBody.characters) {
+    request(c, function (error, response, body) {
       if (error) {
         console.error(error);
       }
