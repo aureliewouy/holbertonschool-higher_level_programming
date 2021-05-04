@@ -14,13 +14,9 @@ request(url[0], function (error, response, body) {
       arr[usr] = completed;
       completed = 0;
       usr++;
-      if (element.completed === true) {
-        completed++;
-      }
-    } else {
-      if (element.completed === true) {
-        completed++;
-      }
+    }
+    if (element.completed === true) {
+      completed++;
     }
   }
   arr[usr] = completed;
