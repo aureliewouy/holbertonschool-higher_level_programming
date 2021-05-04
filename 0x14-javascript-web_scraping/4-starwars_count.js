@@ -10,7 +10,7 @@ request(url[0], function (error, response, body) {
   const results = jsonBody.results;
   for (const element of results) {
     for (const c of element.characters) {
-      if (c.includes("18")) {
+      if (c.includes('18')) {
         nb = nb + 1;
       }
     }
