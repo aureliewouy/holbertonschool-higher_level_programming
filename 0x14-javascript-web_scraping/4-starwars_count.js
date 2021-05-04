@@ -1,7 +1,6 @@
 #!/usr/bin/node
 const url = process.argv.slice(2);
 const request = require('request');
-const wedge = '18';
 let nb = 0;
 request(url[0], function (error, response, body) {
   if (error) {
@@ -11,7 +10,7 @@ request(url[0], function (error, response, body) {
   const results = jsonBody.results;
   for (const element of results) {
     for (const c of element.characters) {
-      if (c === 'https://swapi-api.hbtn.io/api/people/' + wedge + '/') {
+      if (c.includes("18")) {
         nb = nb + 1;
       }
     }
